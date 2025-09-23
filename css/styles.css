@@ -1,16 +1,54 @@
+/* ESTILOS GENERALES */
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
 }
-
 
 body{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-
-
 }
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover{
+    color: darkblue;
+}
+
+h1, h2, h3{
+    font-weight: 400;
+}
+
+h1{
+    margin-top: 10px;
+}
+
+h3{
+    margin: 2vh 0 2vh;
+    
+}
+
+p{
+    margin-top: 2vh;
+    padding: 2vh;
+}
+
+hr{
+ margin-bottom: 2vh;
+ margin-top: 2vh;
+}
+
+/*FIN DE ESTILOS GENERALES*/
+
+
+/*ESTILOS DEL HEADER*/
 
 header{
     width: 100%;
@@ -20,19 +58,10 @@ header{
     margin-top: 5vh;
 }
 
-footer{
-    width: 100%;
-    height: 80px;
-    background-color: white;
-    border-top: 1px solid black;
-    bottom: 0px;
-    position: absolute;
-}
+/* FIN DE ESTILOS DEL HEADER*/
 
-h1{
-    margin-top: 10px;
-}
 
+/* ESTILOS DE CONTENEDORES DE INFORMACIÓN */
 
 .contenedor-principal{
     display: flex;
@@ -55,28 +84,94 @@ h1{
     border: 1px solid white;
     margin: 5vh;
     border-radius: 5vh;
-    overflow: auto;
+    overflow:hidden;
     box-shadow: 2px 2px 5vh rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.secciones:hover{
+    transform: scale(1.1);
+
 }
 
 .img-secciones{
     width: 100%;
     height: 40%;
     background-color: rgb(255, 255, 255);
-
     overflow: hidden;
     margin-bottom: 2vh;
 }
 
 .img-secciones-imagenes{
-    height: 120%;
+    height: 130%;
 }
 
-p{
-    margin-top: 2vh;
-    padding: 2vh;
-}
 
 .img1{
     width: 30%;
 }
+
+.contenedor-informacion{
+    height: 40%;
+    width: 100%;
+    overflow: auto;
+}
+
+.separacion{
+    line-height: 2vh;
+}
+
+.icono{
+    width: 5vh;
+    height: 5vh;
+}
+
+/* FIN DE ESTILOS DE CONTENEDORES DE INFORMACIÓN */
+
+/* ESTILOS DE CONTENEDORES DE PORTAFOLIO */
+.contenedor-portafolio{
+    height: 600px;
+    width: 90%;
+    /*background-color: black;*/
+    display: flex;
+    flex-direction: row;
+    
+}
+.galeria{
+    /*background-color: aqua;*/
+    width: 65%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+.galeria-img{
+    width: 29.5%;
+    height: 250px;
+    background-color: rgb(205, 205, 205);
+    margin: 5px;
+    padding: 10px;
+
+}
+.portafolio-img-principal{
+    /*background-color: blueviolet;*/
+    width: 35%;
+    height: 100%;
+}
+
+/* FIN DE ESTILOS DE CONTENEDORES DE PORTAFOLIO */
+
+
+/* ESTILOS DEL FOOTER */
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-top: 1px solid black;
+    
+}
+
+/* FIN DE ESTILOS DEL FOOTER */
