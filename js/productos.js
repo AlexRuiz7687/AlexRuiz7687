@@ -1,6 +1,9 @@
 //VARIABLES
 let descuentoUsuario = 25;
-let productoSeleccionado = 126;
+
+
+const formulario = document.getElementById("buscarProducto");
+
 
 //ARRAY DE OBJETOS
 let productos = [
@@ -16,6 +19,7 @@ let productos = [
 
 //SELECCIONAR PRODUCTO
 function seleccionProductoId(productoSeleccionado){
+    
     let producto=null
 
     for(let i=0; i<productos.length; i++){
@@ -25,19 +29,19 @@ function seleccionProductoId(productoSeleccionado){
     }
 
     if(producto==null){
+        document.querySelector("div").innerHTML=`
+        <div>
+        <p>Este producto no existe</p>
+        </div>`
         console.log("Este producto no existe")
     }
     else{
-        document.querySelector("footer").innerHTML=`
+        document.querySelector("div").innerHTML=`
             <div>
                 <img src=img/${producto.imagen}>
                 <p> Nombre del Producto: ${producto.nombre}</p>
-                <p>
-                Precio: ${producto.precio}€
-                </p>
-                <p>
-                Precio con descuento: ${descuento(producto,descuentoUsuario)}€
-                </p>
+                <p>Precio: ${producto.precio}€</p>
+                <p>Precio con descuento: ${descuento(producto,descuentoUsuario)}€</p>
                 <p>Descuento Aplicado: ${descuentoUsuario}%</p>
             </div>
             `
@@ -51,4 +55,13 @@ function descuento ( producto, descuentoUsuario){
     return totalDescuento
 }
 
-seleccionProductoId(productoSeleccionado)
+//seleccionProductoId(productoSeleccionado)
+
+
+//EVENTO
+
+formulario.addEventListener("submit",function(e){
+    e.preventDefault();
+    let productoSeleccionado = Number(document.getElementById("idProducto").value);
+    seleccionProductoId(productoSeleccionado);
+});
