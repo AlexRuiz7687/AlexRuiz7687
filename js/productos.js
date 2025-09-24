@@ -4,6 +4,11 @@ let descuentoUsuario = 25;
 
 const formulario = document.getElementById("buscarProducto");
 
+//definit usuario
+
+let usuario=[
+    
+]
 
 //ARRAY DE OBJETOS
 let productos = [
@@ -37,7 +42,7 @@ function seleccionProductoId(productoSeleccionado){
     }
     else{
         document.querySelector("div").innerHTML=`
-            <div>
+            <div class="contenedor-producto">
                 <img src=img/${producto.imagen}>
                 <p> Nombre del Producto: ${producto.nombre}</p>
                 <p>Precio: ${producto.precio}€</p>
