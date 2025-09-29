@@ -23,6 +23,9 @@ let productos = [
 //FUNCIONES
 
 //SELECCIONAR PRODUCTO
+
+// **** INTENTAR CAMBIAR EL CÓDIGO PARA QUE UNA FUNCIÓN SOLO SELECCIONE Y OTRA SOLO MUESTRE *************
+
 function seleccionProductoId(productoSeleccionado){
     
     let producto=null
